@@ -7,7 +7,7 @@ author:     "pakuam"
 catalog: true
 published: true
 header-style: text
-background：'/img/p1.jpg'
+background: '/img/p1.jpg'
 tags:
   - key社
 ---
