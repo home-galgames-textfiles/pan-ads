@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Posts
-background: '/img/bg-post.jpg'
+title: 所有游戏
+background: '/img/bg-index.jpg'
 ---
 
 {% for post in paginator.posts %}
@@ -15,13 +15,13 @@ background: '/img/bg-post.jpg'
     <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
     {% endif %}
   </a>
-  <p class="post-meta">Posted by
+  <p class="post-meta">上传自
     {% if post.author %}
     {{ post.author }}
     {% else %}
     {{ site.author }}
     {% endif %}
-    on {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
+    于 {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
   </p>
 </article>
 
@@ -36,11 +36,11 @@ background: '/img/bg-post.jpg'
 
   {% if paginator.previous_page %}
   <a class="btn btn-primary float-left" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;
-    Newer<span class="d-none d-md-inline"> Posts</span></a>
+    上<span class="d-none d-md-inline"> 一页</span></a>
   {% endif %}
 
   {% if paginator.next_page %}
-  <a class="btn btn-primary float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older<span class="d-none d-md-inline"> Posts</span> &rarr;</a>
+  <a class="btn btn-primary float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下<span class="d-none d-md-inline"> 一页</span> &rarr;</a>
   {% endif %}
 
 </div>
